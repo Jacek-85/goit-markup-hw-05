@@ -72,7 +72,7 @@ img {
 
 .nav-links {
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     gap: 50px;
     padding-left: 93px;
 }
@@ -204,7 +204,8 @@ img {
 }
 
 .bluelink,
-.bluelink-active {
+.bluelink-agencja,
+.bluelink-portfolio {
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -219,29 +220,43 @@ img {
     color: var(--dark);
 }
 
-.bluelink-active {
+.bluelink-agencja {
     color: var(--blue);
     position: relative;
     height: 100%;
-    padding-bottom: 60%;
+    padding-bottom: 57%;
 }
 
-.bluelink-active::after {
+.bluelink-portfolio {
+    color: var(--blue);
+    position: relative;
+    height: 100%;
+    padding-bottom: 52%;
+}
+
+.bluelink-agencja::after,
+.bluelink-portfolio::after {
     display: block;
     border-bottom: 4px solid var(--blue);
-    border-radius: 4px;
+    border-radius: 2px;
     position: absolute;
     content: "";
     width: 100%;
     bottom: 0px;
     left: 0px;
 }
-
-.bluelink:hover,
-.bluelink:focus-within {
-    border-bottom: 4px solid var(--blue);
-    padding-bottom: 50%;
+.bluelink-agencja:hover,
+.bluelink-portfolio:hover {
+    cursor: pointer;
+    color: var(--blue);
 }
+
+/* .bluelink:hover,
+.bluelink:focus-within { 
+    border-bottom: 4px solid var(--blue);
+    border-radius: 2px;
+    padding-bottom: 50%;
+} */
 
 .header-address {
     color: var(--darkgrey);
@@ -251,6 +266,10 @@ img {
 
     text-decoration: none;
     font-weight: 500;
+}
+
+.address-heading {
+    display: flex;
 }
 
 .bluelink:hover,
@@ -423,11 +442,14 @@ img {
 
 .socialicon {
     width: 44px;
-    height: 44px;
+    height: 44px; /*44px;*/
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.socialicon a {
+    height: 20px;
 }
 
 .socialicon-card {
